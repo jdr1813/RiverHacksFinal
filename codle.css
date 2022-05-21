@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  background: #2e294e;
+  color: #98ce00;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.logo,
+.question,
+.answer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.question {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  background: #2e294e;
+  color: #daff7d;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+form {
+  text-align: center;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #2e294e;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+#footer {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
