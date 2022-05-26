@@ -7,7 +7,7 @@
     <script src="codle.js"></script>
   </head>
 
-  <body>
+  <body onload="gameState()">
     <img src="Codle.png" alt="Codle Logo" class="logo" />
     <img src="counter.png" alt="Question" class="question" id="q" />
     <p class="question" style="text-align: center">
@@ -15,12 +15,60 @@
     </p>
     <div id="answers-container" class="answer">
       <form id="myForm0">
-        <input type="text" placeholder="Your answer here..." id="answer0" required />
+        <input
+          type="text"
+          placeholder="Your answer here..."
+          id="answer0"
+          autocomplete="off"
+          required
+        />
       </form>
     </div>
+    <button onclick="showModal()">Modal</button>
     <div class="modal-container" id="modal_container">
       <div class="modal">
         <h1 id="score"></h1>
+        <div id="statistics">
+          <div class="statistics-container">
+            <div id="total_played" class="statistic"></div>
+            <div class="label">Played</div>
+          </div>
+          <div class="statistics-container">
+            <div id="current_streak" class="statistic"></div>
+            <div class="label">Current Streak</div>
+          </div>
+          <div class="statistics-container">
+            <div id="max_streak" class="statistic"></div>
+            <div class="label">Max Streak</div>
+          </div>
+        </div>
+        <h3>GUESS DISTRIBUTION</h3>
+        <div id="guesses">
+          <div id="0/5">
+            0/5 →
+            <p style="display: inline">0</p>
+          </div>
+          <div id="1/5">
+            1/5 →
+            <p style="display: inline">0</p>
+          </div>
+          <div id="2/5">
+            2/5 →
+            <p style="display: inline">0</p>
+          </div>
+          <div id="3/5">
+            3/5 →
+            <p style="display: inline">0</p>
+          </div>
+          <div id="4/5">
+            4/5 →
+            <p style="display: inline">0</p>
+          </div>
+          <div id="5/5">
+            5/5 →
+            <p style="display: inline">0</p>
+          </div>
+        </div>
         <p>
           Share your score on Twitter here →
           <a
@@ -36,8 +84,17 @@
             />
           </a>
         </p>
-        <button id="close">Close Window</button>
+        <div id="modal-footer">
+          <div>
+            <p>Next Codle</p>
+            <div id="countdown"></div>
+          </div>
+        </div>
+        <button id="close">X</button>
       </div>
     </div>
+    <footer id="footer">
+      <button onclick="changePage()">TRAINING</button>
+    </footer>
   </body>
 </html>

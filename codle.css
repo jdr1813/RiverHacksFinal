@@ -18,7 +18,7 @@ body {
 
 .question {
   font-weight: bolder;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 button,
@@ -27,13 +27,14 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
+  font-weight: bolder;
   background: #2e294e;
   color: #daff7d;
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 form {
@@ -68,6 +69,7 @@ form {
   width: 600px;
   max-width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .modal h1 {
@@ -84,4 +86,87 @@ form {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+#statistics {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  white-space: nowrap;
+}
+
+.statistic {
+  /* border: 2px solid green; */
+  margin-top: 15px;
+  font-size: 50px;
+}
+
+#statistics > div {
+  width: 100px;
+  height: 100px;
+  /* border: 2px dashed red; */
+}
+
+.label {
+  position: absolute;
+  width: 17%;
+  bottom: 0;
+  text-align: center;
+}
+
+#modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+}
+
+#countdown {
+  font-size: 30px;
+}
+
+input.error {
+  animation: shake 0.35s;
+  border-color: #d7263d;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
 }
